@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    width: 100%;
+    display: flex;
+}
+.background{
+    background-color: rgb(40, 80, 99);
+    width: 100%;
+    height: 500px;
+    top: -15%;
+    z-index: -1;
+    transform: skewY(-6deg);
+    position: absolute;
+    box-shadow: rgba(128, 128, 128, 0.39) 0px 2px 0px 0px;
+}
+
+.photo{
+    margin-left: 5rem;
+    margin-top: 3rem;
+    background-image: url(./imgs/primer-plano.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-family: playfair-display,'Times New Roman';
+    color: rgb(240, 243, 243);
+    font-size: 4.5rem;
+    box-shadow: rgba(78, 78, 78, 0.185) 2px 5px 3px;
+    text-shadow: 
+    0 0 10px #00000071,
+    0 0 15px #00000071,
+    0 0 20px #00000071;
+}
+.about{
+    padding: 2rem;
+    background-color: white;
+    margin-top: 100px;
+    min-height: 380px;
+    width: 800px;
+    box-shadow: rgba(78, 78, 78, 0.185) 2px 5px 3px;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: roboto-flex, arial;
+}
+.about p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.projects{
+    max-width: 100vw;
+    margin-top: 100px;
+    margin-left: 1rem;
+    margin-right: 0;
+}
+.cards{
+    max-width: 100vw;
+    padding: 1rem;
+    margin: 1rem;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    row-gap: 18px;
+    column-gap: 24px;
+}
+
+.card {
+    width: 550px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: end;
+    border-top: 15px solid rgb(216, 187, 106);
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px 5px rgba(179, 180, 180, 0.781);
+}
+.card img{
+    flex-grow: 1;
+    object-fit: cover;
+}
+footer{
+    margin-top: 2rem;
+    background-color: cadetblue;
+    width: 100vw;
+    padding: 1rem;
+    display: flex;
+    gap: 18px;
+    justify-content: start;
+}
+footer .footer-left{
+    flex-shrink: 0;
+}
+footer img{
+    height: 600px;
+    width: 800px;
+    object-fit: contain;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width: 500px) {
+    header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .background{
+        top: -100px;
+        left: 0;
+        transform: skewY(-25deg);
+    }
+    .photo{
+        width: 300px;
+        height: 500px;
+        background-size: cover;
+    }
+    .projects{
+        margin-left: 1rem;
+        padding: 0;
+    }
+    .cards{
+        margin: 0;
+        padding: 0;
+    }
+    .card{
+        max-width: 350px;
+    }
+}
+
+@font-face {
+    font-family: playfair-display;
+    src: url(./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: roboto-flex;
+    src: url(./fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+}
